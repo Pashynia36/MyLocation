@@ -10,6 +10,19 @@ import UIKit
 import MapKit
 import CoreLocation
 
+// import mapkit corelocation
+// create mkpointannotation & CLLocationManeger
+// add locmanagerDelegate & mkmapviewdelegate
+// initialize in ViewDL manager and delegate of mapview.self
+// add in Info.plist location ns bla bla
+// location manager requestWhenInUse
+// initialize annotation based on class file
+// add annotation to mapView
+// didChange
+// didUpdateLocations
+// didFailWithError
+// viewFor annotation makes a bubble for u
+
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
