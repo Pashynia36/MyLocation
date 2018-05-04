@@ -62,10 +62,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             locationManager!.startUpdatingLocation()
         }
     }
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print("selected")
-    }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
