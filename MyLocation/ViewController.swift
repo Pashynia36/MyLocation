@@ -65,14 +65,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let location = locations.first!
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
-        mapView.setRegion(coordinateRegion, animated: true)
-        locationManager?.stopUpdatingLocation()
-        locationManager = nil
+        if let location = locations.first {
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
+            mapView.setRegion(coordinateRegion, animated: true)
+            locationManager?.stopUpdatingLocation()
+            locationManager = nil
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        
         print("failed to find location: \(error.localizedDescription)")
     }
     
@@ -96,5 +98,3 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         return view
     }
 }
-
-

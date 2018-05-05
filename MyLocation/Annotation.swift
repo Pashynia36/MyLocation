@@ -21,11 +21,11 @@ class Annotation: NSObject, MKAnnotation {
         self.locationName = locationName
         self.picture = picture
         self.coordinate = coordinate
-        
         super.init()
     }
     
     var subtitle: String? {
+        
         return locationName
     }
 }
